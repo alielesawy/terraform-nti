@@ -1,6 +1,6 @@
 # TERRAFORM
 
-![Terraform Icon](icons8-terraform.svg)
+![Terraform Icon](/assetes/icons8-terraform.svg)
 
 ## Overview
 

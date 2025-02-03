@@ -34,12 +34,6 @@ resource "aws_lb_listener" "my_listener" {
   }
 }
 
-# Create TLS Private Key
-resource "tls_private_key" "my_key_pair" {
-  algorithm = "RSA"
-  rsa_bits  = 4096
-}
-
 
 # Output ALB DNS Name
 output "alb_dns_name" {

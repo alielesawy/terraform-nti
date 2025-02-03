@@ -18,6 +18,14 @@ resource "aws_lb_target_group" "my_target_group" {
   vpc_id   = aws_vpc.my_vpc.id
   health_check {
     path = "/"
+    interval            = 30
+    timeout             = 5
+    healthy_threshold   = 5
+    unhealthy_threshold = 2
+    matcher             = "200-399"
+  }
+    tags = {
+    Name = "my-TG"
   }
 }
 
@@ -26,7 +34,7 @@ resource "aws_lb_target_group" "my_target_group" {
 
 resource "aws_lb_listener" "my_listener" {
   load_balancer_arn = aws_lb.my_alb.arn
-  port              = 80
+  port              = "80"
   protocol          = "HTTP"
   default_action {
     type             = "forward"

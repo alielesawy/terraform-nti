@@ -2,6 +2,8 @@
 
 This project uses Terraform to create and manage AWS infrastructure. The infrastructure includes a VPC, subnets, NAT gateways, route tables, security groups, an application load balancer, an auto-scaling group, and more.
 
+![Demo](/assetes/alb.gif)
+
 ## Table of Contents
 
 - [Architecture](#architecture)
@@ -21,43 +23,21 @@ The architecture of this project includes the following components:
 - **Route Tables**: To manage routing within the VPC.
 - **Security Groups**: To control inbound and outbound traffic to the resources.
 - **Application Load Balancer (ALB)**: To distribute incoming traffic across multiple instances.
-- **Auto Scaling Group**: To manage the number of EC2 instances based on demand.
-- **Launch Template**: To define the configuration for the EC2 instances.
-- **Key Pair**: To securely access the EC2 instances.
 
 ## Prerequisites
 
-- [Terraform](https://www.terraform.io/downloads.html) installed on your local machine.
-- AWS account with appropriate permissions to create resources.
-- AWS CLI configured with your credentials.
+- Terraform installed on your local machine.
+- AWS CLI configured with appropriate credentials.
+- An AWS account with necessary permissions.
 
 ## Usage
 
-1. **Clone the repository**:
-    ```sh
-    git clone <repository-url>
-    cd <repository-directory>
-    ```
+To apply the Terraform configuration and create the infrastructure, run the following commands:
 
-2. **Initialize Terraform**:
-    ```sh
-    terraform init
-    ```
-
-3. **Plan the infrastructure**:
-    ```sh
-    terraform plan
-    ```
-
-4. **Apply the configuration**:
-    ```sh
-    terraform apply
-    ```
-
-5. **Destroy the infrastructure** (when no longer needed):
-    ```sh
-    terraform destroy
-    ```
+```sh
+terraform init
+terraform apply
+```
 
 ## Resources
 

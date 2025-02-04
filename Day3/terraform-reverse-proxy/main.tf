@@ -20,17 +20,18 @@ module "load_balancer" {
   private_lb_sg_id  = module.security_group.private_lb_sg_id
   public_ec2        = module.ec2.public_instance_ids
   private_ec2       = module.ec2.private_instance_ids
-
 }
 
 module "ec2" {
   source            = "./modules/ec2"
   public_subnet_ids = module.vpc.public_subnet_ids
   private_subnet_ids = module.vpc.private_subnet_ids
-  ami_id            = data.aws_ami.AmazonLinux2.id # Amazon Linux 2 AMI
+  ami_id            = data.aws_ami.UbuntuLinux.id
   instance_type     = "t2.micro"
   public_sg_id      = module.security_group.public_ec2_sg_id
   private_sg_id     = module.security_group.private_ec2_sg_id
   key_name          = "my-key-pair"
   internal_lb_dns   = module.load_balancer.private_lb_dns
+  nat_gateway_id = module.vpc.nat_gateway_id
+
 }

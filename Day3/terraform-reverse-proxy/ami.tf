@@ -1,15 +1,18 @@
-data "aws_ami" "AmazonLinux2" {
+data "aws_ami" "UbuntuLinux" {
   most_recent = true
 
   filter {
     name   = "name"
-    values = ["amzn2-ami-hvm-*-x86_64-gp2"]
+    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
   }
 
   filter {
-    name   = "virtualization-type"
+    name   = "virtualization-type" 
     values = ["hvm"]
   }
 
-  owners = ["137112412989"] # Amazon
+  owners = ["099720109477"] # Canonical
+}
+output "UbuntuLinux" {
+  value = data.aws_ami.UbuntuLinux.id 
 }

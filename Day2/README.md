@@ -2,15 +2,19 @@
 
 This project uses Terraform to create and manage AWS infrastructure. The infrastructure includes a VPC, subnets, NAT gateways, route tables, security groups, an application load balancer, an auto-scaling group, and more.
 
-![Demo](/assetes/alb.gif)
 
 ## Table of Contents
 
+- [Demo] (#demo)
 - [Architecture](#architecture)
 - [Prerequisites](#prerequisites)
 - [Usage](#usage)
 - [Resources](#resources)
 - [Outputs](#outputs)
+
+## Demo
+
+![Demo](/assetes/alb.gif)
 
 ## Architecture
 

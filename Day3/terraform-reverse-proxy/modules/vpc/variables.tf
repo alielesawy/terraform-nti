@@ -17,3 +17,6 @@ variable "azs" {
   description = "List of availability zones"
   type        = list(string)
 }
+output "nat_gateway_id" {
+  value = aws_nat_gateway.nat.id
+}

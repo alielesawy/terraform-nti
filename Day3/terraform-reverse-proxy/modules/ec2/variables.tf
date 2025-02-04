@@ -37,3 +37,8 @@ variable "internal_lb_dns" {
   description = "DNS name of the internal load balancer"
   type        = string
 }
+variable "nat_gateway_id" {
+  description = "ID of the NAT gateway"
+  type        = string
+ 
+}

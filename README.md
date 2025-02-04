@@ -4,12 +4,12 @@
 
 This project uses Terraform to create and manage AWS infrastructure. The infrastructure is divided into two sub-projects: Day 1 and Day 2, each focusing on different aspects of the AWS setup.
 
-## Project Overview
+## Labs Overview
 
 - **Day 1**: Basic VPC setup with subnets, internet gateway, NAT gateway, security groups, and EC2 instances.
 - **Day 2**: Advanced setup including additional subnets, NAT gateways, route tables, security groups, application load balancer, auto-scaling group, and more.
 
-## Sub-Projects
+## Days-Lab
 
 ### Day 1
 
@@ -38,6 +38,19 @@ Advanced AWS infrastructure setup including:
 - Auto-Scaling Group
 
 For detailed information, visit the [Day 2 README](Day2/README.md).
+
+### Day 3
+
+![Diagram](/assetes/day3.png)
+
+Using modules and varaiables to creat this diagram:
+- Public Load Balancer
+- Public Load Balancer
+- Subnets
+- Secuirty Groups
+- EC2s
+
+For detailed information, visit the [Day 3 README](Day3/README.md).
 
 ## Usage
 

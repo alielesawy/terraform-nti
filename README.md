@@ -50,7 +50,7 @@ Using modules and varaiables to creat this diagram:
 - Secuirty Groups
 - EC2s
 
-For detailed information, visit the [Day 3 README](Day3/README.md).
+For detailed information, visit the [Day 3 README](Day3\terraform-reverse-proxy\README.md).
 
 ## Usage
 
